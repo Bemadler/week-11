@@ -1,0 +1,18 @@
+.button-add{
+    color: #280303;
+    background-color: #ee8fe6;
+    border-color: #d568c5;
+    border-radius: 2rem;
+
+}
+
+.section{
+    justify-content: center;
+    display: grid;
+}
+
+.header{
+
+    justify-content: center;
+    display: grid;
+}
