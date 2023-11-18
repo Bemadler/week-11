@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ToDo List</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/Backet task/assets/style/basket.css">
+        <link rel="stylesheet" href="">
+    </head>
+    <header class="header">
+        <h1 id="header-text">Корзина</h1>
+    </header>
+
+    <body>
+        <div class="container">
+            <div class="item item-1">
+                <img id="cloth" src="/Backet task/assets/img/coat.png" alt="white coat" />
+                <div class="discription">
+                    <h2 class="name">Белое пальто</h2>
+                    <h3 class="discription">
+                        <p>Цвет: Белый</p>
+                        <p>Размер: М</p>
+                        <p>Количество: 1</p>
+                    </h3>
+                </div>
+                <div class="price-box">
+                    <h3 id="price">12800 руб.</h3>
+                </div>
+            </div>
+            <div class="item item-2">
+                <img id="cloth" src="/Backet task/assets/img/red shirt.png" alt="shirt" />
+                <div class="discription">
+                    <h2 class="name">Красная футболка в белую полоску</h2>
+                    <h3 class="discription">
+                        <p>Цвет: Красный</p>
+                        <p>Размер: М</p>
+                        <p>Количество: 1</p>
+                    </h3>
+                </div>
+                <div class="price-box">
+                    <h3 id="price">4080 руб.</h3>
+                </div>
+            </div>
+            <div class="item item-3">
+                <img id="cloth" src="/Backet task/assets/img/jeans.png" alt="black jeans" />
+                <div class="discription">
+                    <h2 class="name">Черные широкие джинсы</h2>
+                    <h3 class="discription">
+                        <p>Цвет: Черный</p>
+                        <p>Размер: М</p>
+                        <p>Количество: 1</p>
+                    </h3>
+                </div>
+                <div class="price-box">
+                    <h3 id="price">3250 руб.</h3>
+                </div>
+            </div>
+            <div class="item item-4">
+                <img id="cloth" src="/Backet task/assets/img/ballerinas.png" alt="shoes" />
+                <div class="discription">
+                    <h2 class="name">Балетки Mary Jane</h2>
+                    <h3 class="discription">
+                        <p>Цвет: Черный</p>
+                        <p>Размер: 37</p>
+                        <p>Количество: 1</p>
+                    </h3>
+                </div>
+                <div class="price-box">
+                    <h3 id="price">5400 руб.</h3>
+                </div>
+            </div>
+            <div class="item item-5">
+                <img id="cloth" src="/Backet task/assets/img/bag.png" alt="bag" />
+                <div class="discription">
+                    <h2 class="name">Блестящаяя сумка с паейтками</h2>
+                    <h3 class="discription">
+                        <p>Цвет: Серебристый</p>
+                        <p>Размер: Маленький</p>
+                        <p>Количество: 1</p>
+                    </h3>
+                </div>
+                <div class="price-box">
+                    <h3 id="price">3200 руб.</h3>
+                </div>
+            </div>
+            <div class="down-box">
+                <button class="discount" onclick="calculateDiscount()">Использовать купон на 20%</button>
+                <p id="paragraph">Итого:</p>
+                <p id="total"></p>
+            </div>
+        </div>
+        <script src="/Backet task/assets/style/basket.js"></script>
+    </body>
+</html>
