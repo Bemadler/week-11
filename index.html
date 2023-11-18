@@ -14,15 +14,24 @@
     </header>
 
     <body>
-        <div class="section">
-            <div>
-                <input id="input" type="text" value="Поле для ввода" />
+        <div class="container">
+            <div ad="section-input">
+                <input id="newTask" type="text" value="Поле для ввода" />
             </div>
-            <div>
-                <button class="button-add">Добавить</button>
+            <div id="section-button">
+                <button class="addTaskButton" onclick="addTask()" >Добавить</button>
             </div>
         </div>
-        
-        <script src="/assets/style/index.js" async defer></script>
+        <div class="container">
+            <h3>Дела</h3>
+        </div>
+        <div class="container">
+            <ul id="toDo">
+                <li>
+                    <label id="first" >Освоить JavaScript</label>
+                </li>
+            </ul>
+        </div>
+        <script src="/assets/style/index.js"></script>
     </body>
 </html>

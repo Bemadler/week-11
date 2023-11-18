@@ -89,7 +89,7 @@ document.querySelector('.b-7').onclick = makeSeven;
 //Задание 8
 //Используйте метод getElementById, чтобы найти элемент <ul>. При нажатии на кнопку добавьте новый элемент <li> со значением "Новый элемент" в список.
 //Подсказка: Используйте метод createElement(), который используется для динамического изменения и взаимодействия с элементами веб-страницы, и метод append(item), который добавляет элемент в конец списка. Новый элемент становится последним элементом списка.
-const practicum8 = document.getElementById('#practicum8')
+const practicum8 = document.getElementById('practicum8')
 function makeEight() {
 	let ul = document.getElementById('practicum8');//Найдите элемент x
 	let li = document.createElement('li');//Создайте новый пункт списка y
@@ -127,7 +127,8 @@ document.querySelector('.b-10').onclick = makeTen;
 //Подсказка: Используйте свойство style для изменения стилей элемента
 const divElement = document.getElementById('practicum11')
 function makeEleven() {
-	divElement.style = 'height: 200px'; 'width: 400px';//Ваш код
+	divElement.style.height = '200px'; 
+	divElement.style.width = '400px';//Ваш код
 }
 
 document.querySelector('.b-11').onclick = makeEleven;
@@ -137,12 +138,22 @@ document.querySelector('.b-11').onclick = makeEleven;
 //Подсказка: Используйте метод toggle() для добавления/удаления класса, который изменяет размеры элемента
 
 function makeTwelve() {
-	const div = document.querySelector('#practicum12');
-div.style = 'width: 400px; height:200px'; 
-    div.addEventListener("mouseenter", function () { div.style ='.resizable-large';
-});
-    div.classList.toggle('#pacticum12');    
+    const element = document.querySelector('#practicum12');
+
+    if (element.classList.contains('resizable-large')) {
+        // Если у элемента есть класс 'resizable-large', уберите его и верните исходные размеры
+        element.style.height = '100px';
+        element.style.width = '200px';
+    } else {
+        // В противном случае добавьте класс 'resizable-large' и измените размеры
+        element.style.height = '200px';
+        element.style.width = '400px';
+    }
+
+    // Используйте toggle() для переключения класса 'resizable-large'
+    element.classList.toggle('resizable-large');
 }
+document.querySelector('#practicum12').onclick = makeTwelve;
 //Задание 13
 //Используйте метод `getElementsByTagName`, чтобы найти первый элемент <ol>. Затем измените его текст на "Первый!".
 //Подсказка: Используйте метод для изменения текстового содержимого элемента
