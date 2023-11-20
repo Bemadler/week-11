@@ -14,7 +14,7 @@ const addTask = function() {
 const completeTask = function() {
     let li = this;
     li.classList.add('done'); // 
-    completedTasks.appendChild(li); 
+    completeTasks.appendChild(li); 
     li.onclick = incompleteTask; 
 }
 addTaskButton.onclick = addTask;

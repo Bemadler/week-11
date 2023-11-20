@@ -1,8 +1,16 @@
 // Функция расчета скидки
 function calculateDiscount() {
     const priceElement = document.getElementById('price');
+    if (!priceElement){
+        console.error('Ошибка:Элемент с идентификатором "price" не найден');
+    }
     const originalPriceText = priceElement.textContent.trim();
-    const originalPrice = parseFloat(originalPriceText.replace(' руб.', '').replace(',', '.'));
+    let originalPrice = parseFloat(
+        originalPriceText.replace(' руб.', '').replace(/,/g, '.')
+        );
+    if (isNaN(originalPrice)){
+        console.error('Ошибка: Невозможно преобразовать цену в число');
+    }
     
     const discountPercentage = 20;
     const discountAmount = (originalPrice * discountPercentage) / 100;
@@ -22,11 +30,14 @@ function displayResult() {
 
     if (result !== null) {
         const totalElement = document.getElementById('total');
-        if (totalElement) {
-            totalElement.textContent = `Цена со скидкой: ${result.discountedPrice.toFixed(2)} руб.`;
-        } else {
-            console.error('Ошибка: Элемент с идентификатором "total" не найден');
-        }
+        if (!result) return;
+        
+    const totalElement = document.getElementById('total');
+    if(!totalElement){
+        console.error('Ошибка: Элемент с идентификатором "total" не найден');
+    }
+
+    totalElement.textContent = `Цена со скидкой: ${result.discountedPrice.toFixed(2)} руб.`;
     }
 }
 

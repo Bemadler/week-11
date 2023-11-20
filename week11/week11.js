@@ -318,7 +318,7 @@ function makeTwentyFive() {
 	element.setAttribute('data-info', 'Дополнительная информация');//2 шаг: Добавьте элементу, найденному в первом шаге, атрибут: ('data-info', 'Дополнительная информация');
 	element.innerText = 'Дополнительная информация';//3 шаг: Запишите значение атрибута в переменную
 	const paragraph = document.getElementById('infoOutput');//4 шаг: Найдите элемент, в который нужно вставить значение из 3 шага
-	paragraph.textContent = 'Добавленный атрибут: ' + element;//5 шаг: Добавьте в элемент 4 шага текстовое значение 3 шага. Например: переменная = 'Добавленный атрибут: ' + название переменной из 3 шага;
+	paragraph.textContent = 'Добавленный атрибут: ' + element.getAttribute('data-info');//5 шаг: Добавьте в элемент 4 шага текстовое значение 3 шага. Например: переменная = 'Добавленный атрибут: ' + название переменной из 3 шага;
 }
 
 document.querySelector('.b-25').onclick = makeTwentyFive;
@@ -328,7 +328,7 @@ document.querySelector('.b-25').onclick = makeTwentyFive;
 //Подсказка: Используйте метод closest для поиска ближайшего родительского элемента
 
 const button = document.querySelector('.b-26');
-const parent = button.closest('button');// const parent = Ваш код;
+const parent = button.closest('.parent');// const parent = Ваш код;
 
 const makeTwentySix = () => {
 	parent.style.backgroundColor = 'red';
